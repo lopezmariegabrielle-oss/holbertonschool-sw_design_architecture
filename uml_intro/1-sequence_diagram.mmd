@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant User
+    participant Library
+    participant Book
+
+    User->>Library: create_loan
+    Lybrary->>Book: mask_as_unavailable
+    create participant Loan
+    Library->>Loan:
+    Library-->>User: loan created
